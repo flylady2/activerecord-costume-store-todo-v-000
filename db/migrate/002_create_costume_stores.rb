@@ -7,8 +7,9 @@ class CreateCostumeStores < ActiveRecord::Migration[5.1]
       t.integer :costume_inventory
       t.integer :num_of_employees
       t.boolean :still_in_business
-      t.text :opening_time, precision:9
-      t.text :closing_time, precision:9
+      t.datetime :opening_time
+      t.datetime :closing_time
+      t.timestamps null: false
     end
   end
 end# Create your costume_stores migration here
